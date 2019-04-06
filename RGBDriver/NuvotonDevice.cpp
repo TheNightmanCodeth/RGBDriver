@@ -7,7 +7,7 @@
 //
 
 #include "NuvotonDevice.hpp"
-#include "RGBDriver.cpp"
+#include "RGBDriver.hpp"
 
 namespace Nuvoton {
     

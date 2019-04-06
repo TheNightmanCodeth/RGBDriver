@@ -9,8 +9,7 @@
 #ifndef NuvotonDevice_hpp
 #define NuvotonDevice_hpp
 
-#include "SuperIODevice.hpp"
-#include "WinbondFamilyDevice.cpp"
+#include "WinbondFamilyDevice.hpp"
 
 namespace Nuvoton {
     // Cool values I pulled from https://github.com/acidanthera/VirtualSMC/blob/master/Sensors/SMCSuperIO/NuvotonDevice.hpp
