@@ -13,16 +13,26 @@
 #ifndef _RGBDRIVER_HPP
 #define _RGBDRIVER_HPP
 
-#include <kern_vsmcapi.hpp>
-#include <IOKit/IOService.h>
-#include "SuperIODevice.hpp"
-#include "KernEventServer.hpp"
+#include <VirtualSMCSDK/kern_vsmcapi.hpp>
+
+#include <SuperIODevice.hpp>
 
 class EXPORT RGBDriver : public IOService {
     OSDeclareDefaultStructors(RGBDriver)
     
+private:
     /**
-     * Register plugin with VirtualSMC
+     * VSMC registration notifier
+     */
+    IONotifier *vsmcNotifier { nullptr };
+    
+    /**
+     * Detected device instance
+     */
+    SuperIODevice *dataSource { nullptr };
+    
+    /**
+     * Registered plugin instance
      */
     VirtualSMCAPI::Plugin vsmcPlugin {
         xStringify(PRODUCT_NAME),
@@ -30,19 +40,52 @@ class EXPORT RGBDriver : public IOService {
         VirtualSMCAPI::Version,
     };
     
+    /**
+     * TBI: Detect a SuperIO device installed.
+     *
+     * ie. When a device is plugged into the RGB Header,
+     * do this.
+     */
+    SuperIODevice *detectDevice();
+    
 public:
-    virtual IOReturn message(UInt32 type, IOService *provider, void *argument) override;
+    /**
+     * Sensor access lock
+     */
+    IOSimpleLock *counterLock { nullptr };
     
-    virtual bool init(OSDictionary *dictionary = 0) override;
-    virtual bool start(IOService *provider) override;
-    virtual void stop(IOService *provider) override;
-    virtual IOService *probe(IOService *provider, SInt32 *score) override;
+    /**
+     * Decide whether to load or not by checking compatibility.
+     *
+     * @param provider  parent IOService object
+     * @param score     probing score
+     *
+     * @return self if we could load
+     */
+    IOService *probe(IOService *service, SInt32 *score) override;
     
-protected:
-    IONotifier *vsmcNotifier {nullptr};
-    KernEventServer kev;
-    void registerVSMC(void);
-    static bool vsmcNotificationHandler(void *sensors, void *refCon, IOService *vsmc, IONotifier *notifier);
+    /**
+     * Add VSMC listening notification.
+     *
+     * @param provider parent IOService object
+     *
+     * @return true on success
+     */
+    bool start(IOService *provider) override;
+    
+    /**
+     * Detect unloads even though they're prohibited (:
+     *
+     * @param provider points to the parent IOService object
+     */
+    void stop(IOService *provider) override;
+    
+    /**
+     * Submit the keys to received VirtualSMC service
+     *
+     * @param sensors
+     */
+    
 };
 
 #endif
