@@ -24,6 +24,7 @@ namespace Nuvoton {
     }
     
     void Device::runProgram(Program program) {
+        enter(getDevicePort());
         if (program.pulse) {
             enablePulsing();
         }
@@ -43,6 +44,7 @@ namespace Nuvoton {
         writeColor(getDevicePort(), NUVOTON_RED_CELL, program.red);
         writeColor(getDevicePort(), NUVOTON_GRN_CELL, program.grn);
         writeColor(getDevicePort(), NUVOTON_BLU_CELL, program.blu);
+        leave(getDevicePort());
     }
     
     void Device::enablePulsing() {
