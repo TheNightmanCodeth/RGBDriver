@@ -15,7 +15,6 @@
 		D8805DB82252B81B00D81AB6 /* kern_keyvalue.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DB22252B81B00D81AB6 /* kern_keyvalue.hpp */; };
 		D8805DB92252B81B00D81AB6 /* kern_value.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DB32252B81B00D81AB6 /* kern_value.hpp */; };
 		D8805DBA2252B81B00D81AB6 /* AppleSmcBridge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DB42252B81B00D81AB6 /* AppleSmcBridge.hpp */; };
-		D8805DBD2252BA8E00D81AB6 /* SuperIODevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8805DBB2252BA8E00D81AB6 /* SuperIODevice.cpp */; };
 		D8805DBE2252BA8E00D81AB6 /* SuperIODevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DBC2252BA8E00D81AB6 /* SuperIODevice.hpp */; };
 		D8805DEF2252BF4C00D81AB6 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8805DC02252BF4C00D81AB6 /* libkmod.a */; };
 		D8805DF72252BF4C00D81AB6 /* plugin_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8805DCA2252BF4C00D81AB6 /* plugin_start.cpp */; };
@@ -55,6 +54,8 @@
 		D883F08E2258544000B067A3 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = D883F08D2258544000B067A3 /* LICENSE.md */; };
 		D886844E2259257C00D846C6 /* WinbondFamilyDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */; };
 		D886844F2259257C00D846C6 /* WinbondFamilyDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */; };
+		D88684522259321700D846C6 /* NuvotonDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88684502259321700D846C6 /* NuvotonDevice.cpp */; };
+		D88684532259321700D846C6 /* NuvotonDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D88684512259321700D846C6 /* NuvotonDevice.hpp */; };
 		D88C08002256618F002745A2 /* KernEventServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88C07FE2256618F002745A2 /* KernEventServer.cpp */; };
 		D88C08012256618F002745A2 /* KernEventServer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D88C07FF2256618F002745A2 /* KernEventServer.hpp */; };
 /* End PBXBuildFile section */
@@ -70,7 +71,6 @@
 		D8805DB22252B81B00D81AB6 /* kern_keyvalue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_keyvalue.hpp; sourceTree = "<group>"; };
 		D8805DB32252B81B00D81AB6 /* kern_value.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_value.hpp; sourceTree = "<group>"; };
 		D8805DB42252B81B00D81AB6 /* AppleSmcBridge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AppleSmcBridge.hpp; sourceTree = "<group>"; };
-		D8805DBB2252BA8E00D81AB6 /* SuperIODevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SuperIODevice.cpp; sourceTree = "<group>"; };
 		D8805DBC2252BA8E00D81AB6 /* SuperIODevice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SuperIODevice.hpp; sourceTree = "<group>"; };
 		D8805DC02252BF4C00D81AB6 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libkmod.a; sourceTree = "<group>"; };
 		D8805DCA2252BF4C00D81AB6 /* plugin_start.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plugin_start.cpp; sourceTree = "<group>"; };
@@ -112,6 +112,8 @@
 		D883F08D2258544000B067A3 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WinbondFamilyDevice.cpp; sourceTree = "<group>"; };
 		D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WinbondFamilyDevice.hpp; sourceTree = "<group>"; };
+		D88684502259321700D846C6 /* NuvotonDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NuvotonDevice.cpp; sourceTree = "<group>"; };
+		D88684512259321700D846C6 /* NuvotonDevice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NuvotonDevice.hpp; sourceTree = "<group>"; };
 		D88C07FE2256618F002745A2 /* KernEventServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KernEventServer.cpp; sourceTree = "<group>"; };
 		D88C07FF2256618F002745A2 /* KernEventServer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KernEventServer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,12 +156,13 @@
 				D8805DA32252B79600D81AB6 /* RGBDriver.hpp */,
 				D8805DA52252B79600D81AB6 /* RGBDriver.cpp */,
 				D8805DA72252B79600D81AB6 /* Info.plist */,
-				D8805DBB2252BA8E00D81AB6 /* SuperIODevice.cpp */,
 				D8805DBC2252BA8E00D81AB6 /* SuperIODevice.hpp */,
 				D88C07FE2256618F002745A2 /* KernEventServer.cpp */,
 				D88C07FF2256618F002745A2 /* KernEventServer.hpp */,
 				D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */,
 				D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */,
+				D88684502259321700D846C6 /* NuvotonDevice.cpp */,
+				D88684512259321700D846C6 /* NuvotonDevice.hpp */,
 			);
 			path = RGBDriver;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				D8805E152252BF4C00D81AB6 /* LiluVariables.h in Headers */,
 				D8805E082252BF4C00D81AB6 /* kern_rtc.hpp in Headers */,
 				D8805DFD2252BF4C00D81AB6 /* kern_cpu.hpp in Headers */,
+				D88684532259321700D846C6 /* NuvotonDevice.hpp in Headers */,
 				D8805E032252BF4C00D81AB6 /* kern_iokit.hpp in Headers */,
 				D8805DBE2252BA8E00D81AB6 /* SuperIODevice.hpp in Headers */,
 				D8805DBA2252B81B00D81AB6 /* AppleSmcBridge.hpp in Headers */,
@@ -373,9 +377,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88684522259321700D846C6 /* NuvotonDevice.cpp in Sources */,
 				D886844E2259257C00D846C6 /* WinbondFamilyDevice.cpp in Sources */,
 				D8805DA62252B79600D81AB6 /* RGBDriver.cpp in Sources */,
-				D8805DBD2252BA8E00D81AB6 /* SuperIODevice.cpp in Sources */,
 				D8805DF72252BF4C00D81AB6 /* plugin_start.cpp in Sources */,
 				D88C08002256618F002745A2 /* KernEventServer.cpp in Sources */,
 			);
