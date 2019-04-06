@@ -53,6 +53,8 @@
 		D8805E172252BF4C00D81AB6 /* kern_api.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DED2252BF4C00D81AB6 /* kern_api.hpp */; };
 		D8805E182252BF4C00D81AB6 /* kern_util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DEE2252BF4C00D81AB6 /* kern_util.hpp */; };
 		D883F08E2258544000B067A3 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = D883F08D2258544000B067A3 /* LICENSE.md */; };
+		D886844E2259257C00D846C6 /* WinbondFamilyDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */; };
+		D886844F2259257C00D846C6 /* WinbondFamilyDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */; };
 		D88C08002256618F002745A2 /* KernEventServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88C07FE2256618F002745A2 /* KernEventServer.cpp */; };
 		D88C08012256618F002745A2 /* KernEventServer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D88C07FF2256618F002745A2 /* KernEventServer.hpp */; };
 /* End PBXBuildFile section */
@@ -108,6 +110,8 @@
 		D883F08B2257ABC100B067A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D883F08C2257ACA500B067A3 /* COMPAT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = COMPAT.md; sourceTree = "<group>"; };
 		D883F08D2258544000B067A3 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WinbondFamilyDevice.cpp; sourceTree = "<group>"; };
+		D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WinbondFamilyDevice.hpp; sourceTree = "<group>"; };
 		D88C07FE2256618F002745A2 /* KernEventServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KernEventServer.cpp; sourceTree = "<group>"; };
 		D88C07FF2256618F002745A2 /* KernEventServer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KernEventServer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +158,8 @@
 				D8805DBC2252BA8E00D81AB6 /* SuperIODevice.hpp */,
 				D88C07FE2256618F002745A2 /* KernEventServer.cpp */,
 				D88C07FF2256618F002745A2 /* KernEventServer.hpp */,
+				D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */,
+				D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */,
 			);
 			path = RGBDriver;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				D8805E092252BF4C00D81AB6 /* kern_disasm.hpp in Headers */,
 				D8805E0A2252BF4C00D81AB6 /* capstone.h in Headers */,
 				D8805E182252BF4C00D81AB6 /* kern_util.hpp in Headers */,
+				D886844F2259257C00D846C6 /* WinbondFamilyDevice.hpp in Headers */,
 				D8805E0B2252BF4C00D81AB6 /* mips.h in Headers */,
 				D8805DF92252BF4C00D81AB6 /* kern_config.hpp in Headers */,
 				D8805DB92252B81B00D81AB6 /* kern_value.hpp in Headers */,
@@ -366,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D886844E2259257C00D846C6 /* WinbondFamilyDevice.cpp in Sources */,
 				D8805DA62252B79600D81AB6 /* RGBDriver.cpp in Sources */,
 				D8805DBD2252BA8E00D81AB6 /* SuperIODevice.cpp in Sources */,
 				D8805DF72252BF4C00D81AB6 /* plugin_start.cpp in Sources */,
