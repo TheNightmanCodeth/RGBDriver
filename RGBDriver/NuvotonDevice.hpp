@@ -20,6 +20,10 @@ namespace Nuvoton {
     static constexpr uint8_t  NUVOTON_REG_ENABLE                 = 0x30;
     static constexpr uint8_t  NUVOTON_HWMON_IO_SPACE_LOCK        = 0x28;
     static constexpr uint16_t NUVOTON_VENDOR_ID                  = 0x5CA3;
+    static constexpr uint16_t NUVOTON_3_FANS_RPM_REGS[] = { 0x656, 0x658, 0x65A };
+    static constexpr uint16_t NUVOTON_5_FANS_RPM_REGS[] = { 0x4C0, 0x4C2, 0x4C4, 0x4C6, 0x4C8 };
+    static constexpr uint16_t NUVOTON_6_FANS_RPM_REGS[] = { 0x4C0, 0x4C2, 0x4C4, 0x4C6, 0x4C8, 0x4CA };
+    static constexpr uint16_t NUVOTON_7_FANS_RPM_REGS[] = { 0x4C0, 0x4C2, 0x4C4, 0x4C6, 0x4C8, 0x4CA, 0x4CE };
     
     // RGB values I pulled from https://github.com/nagisa/msi-rgb/blob/master/src/main.rs
     static constexpr uint8_t  NUVOTON_RGB_BANK                   = 0x12;
@@ -171,7 +175,7 @@ namespace Nuvoton {
         /**
          * Device Factory
          */
-        static SuperIODevice *detect(RGBDriver driver);
+        static SuperIODevice *detect(RGBDriver *driver);
         static const DeviceDescriptor *detectModel(uint16_t id, uint8_t &ldn);
     };
 }

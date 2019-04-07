@@ -11,6 +11,63 @@
 
 namespace Nuvoton {
     
+    void Device::initialize679xx() {
+        i386_ioport_t port = getDevicePort();
+        enter(port);
+        selectLogicalDevice(port, WinbondHardwareMonitorLDN);
+        uint8_t options = listenPortByte(port, NUVOTON_REG_ENABLE);
+        if (options & 0x10) {
+            writePortByte(port, NUVOTON_HWMON_IO_SPACE_LOCK, options & ~0x10);
+        }
+        leave(port);
+    }
+    
+    const Device::DeviceDescriptor *Device::detectModel(uint16_t id, uint8_t &ldn) {
+        uint8_t majorId = id >> 8;
+        if (majorId == 0xB4 && (id & 0xF0) == 0x70)
+            return &_NCT6771F;
+        if (majorId == 0xC3 && (id & 0xF0) == 0x30)
+            return &_NCT6776F;
+        if (majorId == 0xC5 && (id & 0xF0) == 0x60)
+            return &_NCT6779D;
+        if (majorId == 0xC8 && (id & 0xFF) == 0x03)
+            return &_NCT6791D;
+        if (majorId == 0xC9 && (id & 0xFF) == 0x11)
+            return &_NCT6792D;
+        if (majorId == 0xD1 && (id & 0xFF) == 0x21)
+            return &_NCT6793D;
+        if (majorId == 0xD3 && (id & 0xFF) == 0x52)
+            return &_NCT6795D;
+        if (majorId == 0xD4 && (id & 0xFF) == 0x23)
+            return &_NCT6796D;
+        if (majorId == 0xD4 && (id & 0xFF) == 0x51)
+            return &_NCT6797D;
+        if (majorId == 0xD4 && (id & 0xFF) == 0x28)
+            return &_NCT6798D;
+        if (majorId == 0xD4 && (id & 0xFF) == 0x2B)
+            return &_NCT679BD;
+        return nullptr;
+    }
+    
+    SuperIODevice *Device::detect(RGBDriver *d) {
+        return WinbondFamilyDevice::detect<Device, DeviceDescriptor>(d);
+    }
+    
+    /**
+     *  Supported devices
+     */
+    const Device::DeviceDescriptor Device::_NCT6771F = { NCT6771F, nullptr };
+    const Device::DeviceDescriptor Device::_NCT6776F = { NCT6776F, nullptr };
+    const Device::DeviceDescriptor Device::_NCT6779D = { NCT6779D, nullptr };
+    const Device::DeviceDescriptor Device::_NCT6791D = { NCT6791D, &Device::initialize679xx };
+    const Device::DeviceDescriptor Device::_NCT6792D = { NCT6792D, &Device::initialize679xx };
+    const Device::DeviceDescriptor Device::_NCT6793D = { NCT6793D, &Device::initialize679xx };
+    const Device::DeviceDescriptor Device::_NCT6795D = { NCT6795D, &Device::initialize679xx };
+    const Device::DeviceDescriptor Device::_NCT6796D = { NCT6796D, &Device::initialize679xx };
+    const Device::DeviceDescriptor Device::_NCT6797D = { NCT6797D, &Device::initialize679xx };
+    const Device::DeviceDescriptor Device::_NCT6798D = { NCT6798D, &Device::initialize679xx };
+    const Device::DeviceDescriptor Device::_NCT679BD = { NCT679BD, &Device::initialize679xx };
+    
     void Device::writeByteToCell(uint16_t base_port, uint8_t cell, uint8_t data) {
         ::outb(base_port, cell);
         ::outb(base_port + 1, data);
@@ -78,9 +135,9 @@ namespace Nuvoton {
     }
     
     void Device::makeFadeInVal(uint8_t *fade, Program p) {
-        if (p.fadeR) { *fade &= !0b00100000; } else { *fade &= !0; }
-        if (p.fadeG) { *fade &= !0b01000000; } else { *fade &= !0; }
-        if (p.fadeB) { *fade &= !0b10000000; } else { *fade &= !0; }
+        if (p.fadeR) { *fade &= ~0b00100000; } else { *fade &= !0; }
+        if (p.fadeG) { *fade &= ~0b01000000; } else { *fade &= !0; }
+        if (p.fadeB) { *fade &= ~0b10000000; } else { *fade &= !0; }
     }
     
     void Device::makeInvertVal(uint8_t *invert, Program p) {

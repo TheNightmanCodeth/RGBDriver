@@ -56,8 +56,6 @@
 		D886844F2259257C00D846C6 /* WinbondFamilyDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */; };
 		D88684522259321700D846C6 /* NuvotonDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88684502259321700D846C6 /* NuvotonDevice.cpp */; };
 		D88684532259321700D846C6 /* NuvotonDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D88684512259321700D846C6 /* NuvotonDevice.hpp */; };
-		D88C08002256618F002745A2 /* KernEventServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88C07FE2256618F002745A2 /* KernEventServer.cpp */; };
-		D88C08012256618F002745A2 /* KernEventServer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D88C07FF2256618F002745A2 /* KernEventServer.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,8 +112,6 @@
 		D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WinbondFamilyDevice.hpp; sourceTree = "<group>"; };
 		D88684502259321700D846C6 /* NuvotonDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NuvotonDevice.cpp; sourceTree = "<group>"; };
 		D88684512259321700D846C6 /* NuvotonDevice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NuvotonDevice.hpp; sourceTree = "<group>"; };
-		D88C07FE2256618F002745A2 /* KernEventServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KernEventServer.cpp; sourceTree = "<group>"; };
-		D88C07FF2256618F002745A2 /* KernEventServer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KernEventServer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +153,6 @@
 				D8805DA52252B79600D81AB6 /* RGBDriver.cpp */,
 				D8805DA72252B79600D81AB6 /* Info.plist */,
 				D8805DBC2252BA8E00D81AB6 /* SuperIODevice.hpp */,
-				D88C07FE2256618F002745A2 /* KernEventServer.cpp */,
-				D88C07FF2256618F002745A2 /* KernEventServer.hpp */,
 				D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */,
 				D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */,
 				D88684502259321700D846C6 /* NuvotonDevice.cpp */,
@@ -272,7 +266,6 @@
 				D8805DB72252B81B00D81AB6 /* AppleSmc.h in Headers */,
 				D8805E122252BF4C00D81AB6 /* xcore.h in Headers */,
 				D8805E102252BF4C00D81AB6 /* ppc.h in Headers */,
-				D88C08012256618F002745A2 /* KernEventServer.hpp in Headers */,
 				D8805E072252BF4C00D81AB6 /* kern_file.hpp in Headers */,
 				D8805DFA2252BF4C00D81AB6 /* kern_atomic.hpp in Headers */,
 				D8805DFF2252BF4C00D81AB6 /* kern_efi.hpp in Headers */,
@@ -381,7 +374,6 @@
 				D886844E2259257C00D846C6 /* WinbondFamilyDevice.cpp in Sources */,
 				D8805DA62252B79600D81AB6 /* RGBDriver.cpp in Sources */,
 				D8805DF72252BF4C00D81AB6 /* plugin_start.cpp in Sources */,
-				D88C08002256618F002745A2 /* KernEventServer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

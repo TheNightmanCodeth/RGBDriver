@@ -14,7 +14,7 @@
 #define _RGBDRIVER_HPP
 
 #include <VirtualSMCSDK/kern_vsmcapi.hpp>
-
+#include <sys/kern_control.h>
 #include <SuperIODevice.hpp>
 
 class EXPORT RGBDriver : public IOService {
@@ -80,12 +80,17 @@ public:
      */
     void stop(IOService *provider) override;
     
-    /**
-     * Submit the keys to received VirtualSMC service
-     *
-     * @param sensors
-     */
     
+    static bool vsmcNotificationHandler(void *sensors, void *refCon, IOService *vsmc, IONotifier *notifier);
+    
+    /**
+     * Socket handlers
+     */
+    static errno_t kernHandleWrite(kern_ctl_ref ctlref, unsigned int unit, void *userData, mbuf_t m, int flags);
+    static errno_t kernHandleGetOpt(kern_ctl_ref ctlref, unsigned int unit, void *userdata, int opt, void *data, size_t len);
+    static errno_t kernHandleSetOpt(kern_ctl_ref ctlref, unsigned int unit, void *userdata, int opt, void *data, size_t len);
+    static errno_t kernHandleConnect(kern_ctl_ref ctlref, struct sockaddr_ctl *sac, void **unitinfo);
+    static errno_t kernHandleDisconnect(kern_ctl_ref ctlref, unsigned int unit, void *unitinfo);
 };
 
 #endif
