@@ -32,16 +32,30 @@ bool RGBDriver::vsmcNotificationHandler(void *sensors, void *refCon, IOService *
     return false;
 }
 
-errno_t kernHandleWrite(kern_ctl_ref ctlref, unsigned int unit, void *userData, mbuf_t m, int flags) {
+errno_t kernHandleWrite(kern_ctl_ref ctlref, unsigned int unit, void *unitinfo, mbuf_t m, int flags) {
     return 0;
 }
 
-errno_t kernHandleGetOpt(kern_ctl_ref ctlref, unsigned int unit, void *userdata, int opt, void *data, size_t *len) {
+errno_t kernHandleGetOpt(kern_ctl_ref ctlref, unsigned int unit, void *unitinfo, int opt, void *data, size_t *len) {
     return 0;
 }
 
-errno_t kernHandleSetOpt(kern_ctl_ref ctlref, unsigned int unit, void *userdata, int opt, void *data, size_t len) {
-    return 0;
+errno_t kernHandleSetOpt(kern_ctl_ref ctlref, unsigned int unit, void *unitinfo, int opt, void *data, size_t len) {
+    // I believe we can cast data to any type we want.
+    // Hopefully it won't be too rediculous getting the data
+    // into a format that's easy to receive from user land.
+    int ret = 0;
+    switch (opt) {
+        case 1337:
+            char str[sizeof((char*)data)];
+            strcpy(str, (char*)data, sizeof((char*)data));
+            printf("1337: new string is: \"%s\"\n", str);
+            break;
+        default:
+            ret = ENOTSUP;
+            break;
+    }
+    return ret;
 }
 
 errno_t kernHandleConnect(kern_ctl_ref ctlref, struct sockaddr_ctl *sac, void **unitinfo) {
