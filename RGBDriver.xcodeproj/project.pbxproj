@@ -52,6 +52,8 @@
 		D8805E172252BF4C00D81AB6 /* kern_api.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DED2252BF4C00D81AB6 /* kern_api.hpp */; };
 		D8805E182252BF4C00D81AB6 /* kern_util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DEE2252BF4C00D81AB6 /* kern_util.hpp */; };
 		D883F08E2258544000B067A3 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = D883F08D2258544000B067A3 /* LICENSE.md */; };
+		D885492B225D156F00227707 /* RGBKextAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D885492A225D156F00227707 /* RGBKextAPI.swift */; };
+		D885492E225D15B600227707 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = D885492D225D15B600227707 /* Shared.h */; };
 		D886844E2259257C00D846C6 /* WinbondFamilyDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */; };
 		D886844F2259257C00D846C6 /* WinbondFamilyDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */; };
 		D88684522259321700D846C6 /* NuvotonDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88684502259321700D846C6 /* NuvotonDevice.cpp */; };
@@ -108,6 +110,9 @@
 		D883F08B2257ABC100B067A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D883F08C2257ACA500B067A3 /* COMPAT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = COMPAT.md; sourceTree = "<group>"; };
 		D883F08D2258544000B067A3 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		D8854929225D156F00227707 /* RGBDriver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RGBDriver-Bridging-Header.h"; sourceTree = "<group>"; };
+		D885492A225D156F00227707 /* RGBKextAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBKextAPI.swift; sourceTree = "<group>"; };
+		D885492D225D15B600227707 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WinbondFamilyDevice.cpp; sourceTree = "<group>"; };
 		D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WinbondFamilyDevice.hpp; sourceTree = "<group>"; };
 		D88684502259321700D846C6 /* NuvotonDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NuvotonDevice.cpp; sourceTree = "<group>"; };
@@ -129,12 +134,12 @@
 		D8805D962252B79600D81AB6 = {
 			isa = PBXGroup;
 			children = (
+				D8854926225D14EF00227707 /* src */,
+				D8805DAD2252B7A900D81AB6 /* SDK */,
+				D8805DA12252B79600D81AB6 /* Products */,
 				D883F08D2258544000B067A3 /* LICENSE.md */,
 				D883F08C2257ACA500B067A3 /* COMPAT.md */,
 				D883F08B2257ABC100B067A3 /* README.md */,
-				D8805DA22252B79600D81AB6 /* RGBDriver */,
-				D8805DAD2252B7A900D81AB6 /* SDK */,
-				D8805DA12252B79600D81AB6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,21 +149,6 @@
 				D8805DA02252B79600D81AB6 /* RGBDriver.kext */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D8805DA22252B79600D81AB6 /* RGBDriver */ = {
-			isa = PBXGroup;
-			children = (
-				D8805DA32252B79600D81AB6 /* RGBDriver.hpp */,
-				D8805DA52252B79600D81AB6 /* RGBDriver.cpp */,
-				D8805DA72252B79600D81AB6 /* Info.plist */,
-				D8805DBC2252BA8E00D81AB6 /* SuperIODevice.hpp */,
-				D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */,
-				D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */,
-				D88684502259321700D846C6 /* NuvotonDevice.cpp */,
-				D88684512259321700D846C6 /* NuvotonDevice.hpp */,
-			);
-			path = RGBDriver;
 			sourceTree = "<group>";
 		};
 		D8805DAD2252B7A900D81AB6 /* SDK */ = {
@@ -249,6 +239,40 @@
 			path = Guid;
 			sourceTree = "<group>";
 		};
+		D8854926225D14EF00227707 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D885492D225D15B600227707 /* Shared.h */,
+				D885492C225D157F00227707 /* 1337Swift */,
+				D8854927225D151000227707 /* RGBKext */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		D8854927225D151000227707 /* RGBKext */ = {
+			isa = PBXGroup;
+			children = (
+				D8805DA32252B79600D81AB6 /* RGBDriver.hpp */,
+				D8805DA52252B79600D81AB6 /* RGBDriver.cpp */,
+				D8805DA72252B79600D81AB6 /* Info.plist */,
+				D8805DBC2252BA8E00D81AB6 /* SuperIODevice.hpp */,
+				D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */,
+				D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */,
+				D88684502259321700D846C6 /* NuvotonDevice.cpp */,
+				D88684512259321700D846C6 /* NuvotonDevice.hpp */,
+			);
+			name = RGBKext;
+			sourceTree = "<group>";
+		};
+		D885492C225D157F00227707 /* 1337Swift */ = {
+			isa = PBXGroup;
+			children = (
+				D885492A225D156F00227707 /* RGBKextAPI.swift */,
+				D8854929225D156F00227707 /* RGBDriver-Bridging-Header.h */,
+			);
+			name = 1337Swift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -281,6 +305,7 @@
 				D8805E0B2252BF4C00D81AB6 /* mips.h in Headers */,
 				D8805DF92252BF4C00D81AB6 /* kern_config.hpp in Headers */,
 				D8805DB92252B81B00D81AB6 /* kern_value.hpp in Headers */,
+				D885492E225D15B600227707 /* Shared.h in Headers */,
 				D8805E112252BF4C00D81AB6 /* arm64.h in Headers */,
 				D8805E052252BF4C00D81AB6 /* kern_mach.hpp in Headers */,
 				D8805E022252BF4C00D81AB6 /* plugin_start.hpp in Headers */,
@@ -334,6 +359,7 @@
 				TargetAttributes = {
 					D8805D9F2252B79600D81AB6 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -373,6 +399,7 @@
 				D88684522259321700D846C6 /* NuvotonDevice.cpp in Sources */,
 				D886844E2259257C00D846C6 /* WinbondFamilyDevice.cpp in Sources */,
 				D8805DA62252B79600D81AB6 /* RGBDriver.cpp in Sources */,
+				D885492B225D156F00227707 /* RGBKextAPI.swift in Sources */,
 				D8805DF72252BF4C00D81AB6 /* plugin_start.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,7 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++1y";
-				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -518,6 +545,11 @@
 					/Library/Extensions/Lilu.kext/Contents/Resources,
 				);
 				INFOPLIST_FILE = RGBDriver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
@@ -543,6 +575,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.jdiggity.RGBDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OBJC_BRIDGING_HEADER = "RGBDriver-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = kext;
@@ -553,7 +588,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++1y";
-				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -569,6 +604,11 @@
 					/Library/Extensions/Lilu.kext/Contents/Resources,
 				);
 				INFOPLIST_FILE = RGBDriver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
@@ -594,6 +634,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.jdiggity.RGBDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OBJC_BRIDGING_HEADER = "RGBDriver-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = kext;
