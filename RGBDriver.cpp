@@ -5,6 +5,46 @@ OSDefineMetaClassAndStructors(RGBDriver, IOService)
 bool ADDPR(debugEnabled) = false;
 uint32_t ADDPR(debugPrintDelay) = 0;
 
+struct Program {
+    Program() : invR(false), invG(false), invB(false), flash(0), pulse(false), fadeR(false), fadeG(false), fadeB(false), red(0x0), grn(0x0), blu(0x0), stepDuration(0x0)
+    {}
+    /**
+     * Inverse
+     */
+    const bool invR;
+    const bool invG;
+    const bool invB;
+    
+    /**
+     * flash/blink
+     */
+    const uint8_t flash;
+    
+    /**
+     * smooth pulse
+     */
+    const bool pulse;
+    
+    /**
+     * Fade-in
+     */
+    const bool fadeR;
+    const bool fadeG;
+    const bool fadeB;
+    
+    /**
+     * Color cell values
+     */
+    const uint32_t red;
+    const uint32_t grn;
+    const uint32_t blu;
+    
+    /**
+     * Step duration
+     */
+    const uint16_t stepDuration;
+};
+
 IOService *RGBDriver::probe(IOService *service, SInt32 *score) {
     return IOService::probe(service, score);
 }
@@ -47,9 +87,7 @@ errno_t kernHandleSetOpt(kern_ctl_ref ctlref, unsigned int unit, void *unitinfo,
     int ret = 0;
     switch (opt) {
         case 1337:
-            char str[sizeof((char*)data)];
-            strcpy(str, (char*)data, sizeof((char*)data));
-            printf("1337: new string is: \"%s\"\n", str);
+            detectDevice();
             break;
         default:
             ret = ENOTSUP;
