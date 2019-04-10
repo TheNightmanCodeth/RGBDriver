@@ -7,57 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8805DA42252B79600D81AB6 /* RGBDriver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DA32252B79600D81AB6 /* RGBDriver.hpp */; };
 		D8805DA62252B79600D81AB6 /* RGBDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8805DA52252B79600D81AB6 /* RGBDriver.cpp */; };
-		D8805DB52252B81B00D81AB6 /* kern_smcinfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DAF2252B81B00D81AB6 /* kern_smcinfo.hpp */; };
-		D8805DB62252B81B00D81AB6 /* kern_vsmcapi.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DB02252B81B00D81AB6 /* kern_vsmcapi.hpp */; };
-		D8805DB72252B81B00D81AB6 /* AppleSmc.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DB12252B81B00D81AB6 /* AppleSmc.h */; };
-		D8805DB82252B81B00D81AB6 /* kern_keyvalue.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DB22252B81B00D81AB6 /* kern_keyvalue.hpp */; };
-		D8805DB92252B81B00D81AB6 /* kern_value.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DB32252B81B00D81AB6 /* kern_value.hpp */; };
-		D8805DBA2252B81B00D81AB6 /* AppleSmcBridge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DB42252B81B00D81AB6 /* AppleSmcBridge.hpp */; };
-		D8805DBE2252BA8E00D81AB6 /* SuperIODevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DBC2252BA8E00D81AB6 /* SuperIODevice.hpp */; };
-		D8805DEF2252BF4C00D81AB6 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8805DC02252BF4C00D81AB6 /* libkmod.a */; };
-		D8805DF72252BF4C00D81AB6 /* plugin_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8805DCA2252BF4C00D81AB6 /* plugin_start.cpp */; };
-		D8805DF82252BF4C00D81AB6 /* LegacyIOService.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DCB2252BF4C00D81AB6 /* LegacyIOService.h */; };
-		D8805DF92252BF4C00D81AB6 /* kern_config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DCD2252BF4C00D81AB6 /* kern_config.hpp */; };
-		D8805DFA2252BF4C00D81AB6 /* kern_atomic.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DCE2252BF4C00D81AB6 /* kern_atomic.hpp */; };
-		D8805DFB2252BF4C00D81AB6 /* kern_time.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DCF2252BF4C00D81AB6 /* kern_time.hpp */; };
-		D8805DFC2252BF4C00D81AB6 /* kern_nvram.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD02252BF4C00D81AB6 /* kern_nvram.hpp */; };
-		D8805DFD2252BF4C00D81AB6 /* kern_cpu.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD12252BF4C00D81AB6 /* kern_cpu.hpp */; };
-		D8805DFE2252BF4C00D81AB6 /* kern_devinfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD22252BF4C00D81AB6 /* kern_devinfo.hpp */; };
-		D8805DFF2252BF4C00D81AB6 /* kern_efi.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD32252BF4C00D81AB6 /* kern_efi.hpp */; };
-		D8805E002252BF4C00D81AB6 /* kern_policy.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD42252BF4C00D81AB6 /* kern_policy.hpp */; };
-		D8805E012252BF4C00D81AB6 /* kern_user.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD52252BF4C00D81AB6 /* kern_user.hpp */; };
-		D8805E022252BF4C00D81AB6 /* plugin_start.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD62252BF4C00D81AB6 /* plugin_start.hpp */; };
-		D8805E032252BF4C00D81AB6 /* kern_iokit.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD72252BF4C00D81AB6 /* kern_iokit.hpp */; };
-		D8805E042252BF4C00D81AB6 /* kern_crypto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD82252BF4C00D81AB6 /* kern_crypto.hpp */; };
-		D8805E052252BF4C00D81AB6 /* kern_mach.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DD92252BF4C00D81AB6 /* kern_mach.hpp */; };
-		D8805E062252BF4C00D81AB6 /* kern_compression.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DDA2252BF4C00D81AB6 /* kern_compression.hpp */; };
-		D8805E072252BF4C00D81AB6 /* kern_file.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DDB2252BF4C00D81AB6 /* kern_file.hpp */; };
-		D8805E082252BF4C00D81AB6 /* kern_rtc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DDC2252BF4C00D81AB6 /* kern_rtc.hpp */; };
-		D8805E092252BF4C00D81AB6 /* kern_disasm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DDD2252BF4C00D81AB6 /* kern_disasm.hpp */; };
-		D8805E0A2252BF4C00D81AB6 /* capstone.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DDF2252BF4C00D81AB6 /* capstone.h */; };
-		D8805E0B2252BF4C00D81AB6 /* mips.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE02252BF4C00D81AB6 /* mips.h */; };
-		D8805E0C2252BF4C00D81AB6 /* sparc.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE12252BF4C00D81AB6 /* sparc.h */; };
-		D8805E0D2252BF4C00D81AB6 /* systemz.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE22252BF4C00D81AB6 /* systemz.h */; };
-		D8805E0E2252BF4C00D81AB6 /* arm.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE32252BF4C00D81AB6 /* arm.h */; };
-		D8805E0F2252BF4C00D81AB6 /* x86.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE42252BF4C00D81AB6 /* x86.h */; };
-		D8805E102252BF4C00D81AB6 /* ppc.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE52252BF4C00D81AB6 /* ppc.h */; };
-		D8805E112252BF4C00D81AB6 /* arm64.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE62252BF4C00D81AB6 /* arm64.h */; };
-		D8805E122252BF4C00D81AB6 /* xcore.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE72252BF4C00D81AB6 /* xcore.h */; };
-		D8805E132252BF4C00D81AB6 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE82252BF4C00D81AB6 /* platform.h */; };
-		D8805E142252BF4C00D81AB6 /* kern_patcher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DE92252BF4C00D81AB6 /* kern_patcher.hpp */; };
-		D8805E152252BF4C00D81AB6 /* LiluVariables.h in Headers */ = {isa = PBXBuildFile; fileRef = D8805DEB2252BF4C00D81AB6 /* LiluVariables.h */; };
-		D8805E162252BF4C00D81AB6 /* kern_compat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DEC2252BF4C00D81AB6 /* kern_compat.hpp */; };
-		D8805E172252BF4C00D81AB6 /* kern_api.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DED2252BF4C00D81AB6 /* kern_api.hpp */; };
-		D8805E182252BF4C00D81AB6 /* kern_util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DEE2252BF4C00D81AB6 /* kern_util.hpp */; };
-		D883F08E2258544000B067A3 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = D883F08D2258544000B067A3 /* LICENSE.md */; };
-		D885492B225D156F00227707 /* RGBKextAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D885492A225D156F00227707 /* RGBKextAPI.swift */; };
-		D885492E225D15B600227707 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = D885492D225D15B600227707 /* Shared.h */; };
+		D885493B225D274D00227707 /* RGBKextAPI.c in Sources */ = {isa = PBXBuildFile; fileRef = D8854930225D24B500227707 /* RGBKextAPI.c */; };
+		D8854940225D277000227707 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D885493D225D277000227707 /* CoreFoundation.framework */; };
+		D8854941225D277000227707 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D885493E225D277000227707 /* IOKit.framework */; };
+		D8854942225D277000227707 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D885493F225D277000227707 /* ApplicationServices.framework */; };
+		D8854947225D27D100227707 /* RGBKextInterface.c in Sources */ = {isa = PBXBuildFile; fileRef = D8854944225D279400227707 /* RGBKextInterface.c */; };
+		D8854948225D287600227707 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = D885492D225D15B600227707 /* Shared.h */; };
+		D8854949225D287D00227707 /* RGBDriver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DA32252B79600D81AB6 /* RGBDriver.hpp */; };
+		D885494A225D287E00227707 /* SuperIODevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D8805DBC2252BA8E00D81AB6 /* SuperIODevice.hpp */; };
+		D885494B225D288000227707 /* WinbondFamilyDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */; };
+		D885494C225D288300227707 /* NuvotonDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D88684512259321700D846C6 /* NuvotonDevice.hpp */; };
+		D885494D225D299C00227707 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8805DC02252BF4C00D81AB6 /* libkmod.a */; };
+		D8854950225D38CB00227707 /* RGBUserClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D885494E225D38CB00227707 /* RGBUserClient.cpp */; };
+		D8854951225D38CB00227707 /* RGBUserClient.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D885494F225D38CB00227707 /* RGBUserClient.hpp */; };
 		D886844E2259257C00D846C6 /* WinbondFamilyDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */; };
-		D886844F2259257C00D846C6 /* WinbondFamilyDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */; };
 		D88684522259321700D846C6 /* NuvotonDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88684502259321700D846C6 /* NuvotonDevice.cpp */; };
-		D88684532259321700D846C6 /* NuvotonDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D88684512259321700D846C6 /* NuvotonDevice.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,9 +75,16 @@
 		D883F08B2257ABC100B067A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D883F08C2257ACA500B067A3 /* COMPAT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = COMPAT.md; sourceTree = "<group>"; };
 		D883F08D2258544000B067A3 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		D8854929225D156F00227707 /* RGBDriver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RGBDriver-Bridging-Header.h"; sourceTree = "<group>"; };
-		D885492A225D156F00227707 /* RGBKextAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBKextAPI.swift; sourceTree = "<group>"; };
 		D885492D225D15B600227707 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
+		D8854930225D24B500227707 /* RGBKextAPI.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = RGBKextAPI.c; sourceTree = "<group>"; };
+		D8854937225D267600227707 /* libRGBKextAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRGBKextAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D885493D225D277000227707 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D885493E225D277000227707 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		D885493F225D277000227707 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		D8854943225D279400227707 /* RGBKextInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGBKextInterface.h; sourceTree = "<group>"; };
+		D8854944225D279400227707 /* RGBKextInterface.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = RGBKextInterface.c; sourceTree = "<group>"; };
+		D885494E225D38CB00227707 /* RGBUserClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RGBUserClient.cpp; sourceTree = "<group>"; };
+		D885494F225D38CB00227707 /* RGBUserClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RGBUserClient.hpp; sourceTree = "<group>"; };
 		D886844C2259257C00D846C6 /* WinbondFamilyDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WinbondFamilyDevice.cpp; sourceTree = "<group>"; };
 		D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WinbondFamilyDevice.hpp; sourceTree = "<group>"; };
 		D88684502259321700D846C6 /* NuvotonDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NuvotonDevice.cpp; sourceTree = "<group>"; };
@@ -124,7 +96,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8805DEF2252BF4C00D81AB6 /* libkmod.a in Frameworks */,
+				D885494D225D299C00227707 /* libkmod.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8854935225D267600227707 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8854940225D277000227707 /* CoreFoundation.framework in Frameworks */,
+				D8854941225D277000227707 /* IOKit.framework in Frameworks */,
+				D8854942225D277000227707 /* ApplicationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +122,7 @@
 				D883F08D2258544000B067A3 /* LICENSE.md */,
 				D883F08C2257ACA500B067A3 /* COMPAT.md */,
 				D883F08B2257ABC100B067A3 /* README.md */,
+				D885493C225D276F00227707 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				D8805DA02252B79600D81AB6 /* RGBDriver.kext */,
+				D8854937225D267600227707 /* libRGBKextAPI.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				D885492D225D15B600227707 /* Shared.h */,
-				D885492C225D157F00227707 /* 1337Swift */,
+				D885492C225D157F00227707 /* RGBKextAPI */,
 				D8854927225D151000227707 /* RGBKext */,
 			);
 			name = src;
@@ -260,17 +244,30 @@
 				D886844D2259257C00D846C6 /* WinbondFamilyDevice.hpp */,
 				D88684502259321700D846C6 /* NuvotonDevice.cpp */,
 				D88684512259321700D846C6 /* NuvotonDevice.hpp */,
+				D885494E225D38CB00227707 /* RGBUserClient.cpp */,
+				D885494F225D38CB00227707 /* RGBUserClient.hpp */,
 			);
 			name = RGBKext;
 			sourceTree = "<group>";
 		};
-		D885492C225D157F00227707 /* 1337Swift */ = {
+		D885492C225D157F00227707 /* RGBKextAPI */ = {
 			isa = PBXGroup;
 			children = (
-				D885492A225D156F00227707 /* RGBKextAPI.swift */,
-				D8854929225D156F00227707 /* RGBDriver-Bridging-Header.h */,
+				D8854930225D24B500227707 /* RGBKextAPI.c */,
+				D8854943225D279400227707 /* RGBKextInterface.h */,
+				D8854944225D279400227707 /* RGBKextInterface.c */,
 			);
-			name = 1337Swift;
+			name = RGBKextAPI;
+			sourceTree = "<group>";
+		};
+		D885493C225D276F00227707 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D885493F225D277000227707 /* ApplicationServices.framework */,
+				D885493D225D277000227707 /* CoreFoundation.framework */,
+				D885493E225D277000227707 /* IOKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,50 +277,19 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8805DB62252B81B00D81AB6 /* kern_vsmcapi.hpp in Headers */,
-				D8805E0E2252BF4C00D81AB6 /* arm.h in Headers */,
-				D8805E012252BF4C00D81AB6 /* kern_user.hpp in Headers */,
-				D8805E132252BF4C00D81AB6 /* platform.h in Headers */,
-				D8805E142252BF4C00D81AB6 /* kern_patcher.hpp in Headers */,
-				D8805DF82252BF4C00D81AB6 /* LegacyIOService.h in Headers */,
-				D8805E062252BF4C00D81AB6 /* kern_compression.hpp in Headers */,
-				D8805DB72252B81B00D81AB6 /* AppleSmc.h in Headers */,
-				D8805E122252BF4C00D81AB6 /* xcore.h in Headers */,
-				D8805E102252BF4C00D81AB6 /* ppc.h in Headers */,
-				D8805E072252BF4C00D81AB6 /* kern_file.hpp in Headers */,
-				D8805DFA2252BF4C00D81AB6 /* kern_atomic.hpp in Headers */,
-				D8805DFF2252BF4C00D81AB6 /* kern_efi.hpp in Headers */,
-				D8805DFB2252BF4C00D81AB6 /* kern_time.hpp in Headers */,
-				D8805DB82252B81B00D81AB6 /* kern_keyvalue.hpp in Headers */,
-				D8805DB52252B81B00D81AB6 /* kern_smcinfo.hpp in Headers */,
-				D8805E172252BF4C00D81AB6 /* kern_api.hpp in Headers */,
-				D8805DFC2252BF4C00D81AB6 /* kern_nvram.hpp in Headers */,
-				D8805E092252BF4C00D81AB6 /* kern_disasm.hpp in Headers */,
-				D8805E0A2252BF4C00D81AB6 /* capstone.h in Headers */,
-				D8805E182252BF4C00D81AB6 /* kern_util.hpp in Headers */,
-				D886844F2259257C00D846C6 /* WinbondFamilyDevice.hpp in Headers */,
-				D8805E0B2252BF4C00D81AB6 /* mips.h in Headers */,
-				D8805DF92252BF4C00D81AB6 /* kern_config.hpp in Headers */,
-				D8805DB92252B81B00D81AB6 /* kern_value.hpp in Headers */,
-				D885492E225D15B600227707 /* Shared.h in Headers */,
-				D8805E112252BF4C00D81AB6 /* arm64.h in Headers */,
-				D8805E052252BF4C00D81AB6 /* kern_mach.hpp in Headers */,
-				D8805E022252BF4C00D81AB6 /* plugin_start.hpp in Headers */,
-				D8805E042252BF4C00D81AB6 /* kern_crypto.hpp in Headers */,
-				D8805DFE2252BF4C00D81AB6 /* kern_devinfo.hpp in Headers */,
-				D8805E002252BF4C00D81AB6 /* kern_policy.hpp in Headers */,
-				D8805E0D2252BF4C00D81AB6 /* systemz.h in Headers */,
-				D8805E0C2252BF4C00D81AB6 /* sparc.h in Headers */,
-				D8805E0F2252BF4C00D81AB6 /* x86.h in Headers */,
-				D8805DA42252B79600D81AB6 /* RGBDriver.hpp in Headers */,
-				D8805E162252BF4C00D81AB6 /* kern_compat.hpp in Headers */,
-				D8805E152252BF4C00D81AB6 /* LiluVariables.h in Headers */,
-				D8805E082252BF4C00D81AB6 /* kern_rtc.hpp in Headers */,
-				D8805DFD2252BF4C00D81AB6 /* kern_cpu.hpp in Headers */,
-				D88684532259321700D846C6 /* NuvotonDevice.hpp in Headers */,
-				D8805E032252BF4C00D81AB6 /* kern_iokit.hpp in Headers */,
-				D8805DBE2252BA8E00D81AB6 /* SuperIODevice.hpp in Headers */,
-				D8805DBA2252B81B00D81AB6 /* AppleSmcBridge.hpp in Headers */,
+				D8854948225D287600227707 /* Shared.h in Headers */,
+				D8854949225D287D00227707 /* RGBDriver.hpp in Headers */,
+				D885494A225D287E00227707 /* SuperIODevice.hpp in Headers */,
+				D885494B225D288000227707 /* WinbondFamilyDevice.hpp in Headers */,
+				D8854951225D38CB00227707 /* RGBUserClient.hpp in Headers */,
+				D885494C225D288300227707 /* NuvotonDevice.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8854933225D267600227707 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +314,23 @@
 			productReference = D8805DA02252B79600D81AB6 /* RGBDriver.kext */;
 			productType = "com.apple.product-type.kernel-extension";
 		};
+		D8854936225D267600227707 /* RGBKextAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8854938225D267600227707 /* Build configuration list for PBXNativeTarget "RGBKextAPI" */;
+			buildPhases = (
+				D8854933225D267600227707 /* Headers */,
+				D8854934225D267600227707 /* Sources */,
+				D8854935225D267600227707 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RGBKextAPI;
+			productName = RGBKextAPI;
+			productReference = D8854937225D267600227707 /* libRGBKextAPI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -360,6 +343,9 @@
 					D8805D9F2252B79600D81AB6 = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
+					};
+					D8854936225D267600227707 = {
+						CreatedOnToolsVersion = 10.2;
 					};
 				};
 			};
@@ -376,6 +362,7 @@
 			projectRoot = "";
 			targets = (
 				D8805D9F2252B79600D81AB6 /* RGBDriver */,
+				D8854936225D267600227707 /* RGBKextAPI */,
 			);
 		};
 /* End PBXProject section */
@@ -385,7 +372,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D883F08E2258544000B067A3 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,8 +385,16 @@
 				D88684522259321700D846C6 /* NuvotonDevice.cpp in Sources */,
 				D886844E2259257C00D846C6 /* WinbondFamilyDevice.cpp in Sources */,
 				D8805DA62252B79600D81AB6 /* RGBDriver.cpp in Sources */,
-				D885492B225D156F00227707 /* RGBKextAPI.swift in Sources */,
-				D8805DF72252BF4C00D81AB6 /* plugin_start.cpp in Sources */,
+				D8854950225D38CB00227707 /* RGBUserClient.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8854934225D267600227707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D885493B225D274D00227707 /* RGBKextAPI.c in Sources */,
+				D8854947225D27D100227707 /* RGBKextInterface.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,17 +538,13 @@
 					/Library/Extensions/VirtualSMC.kext/Contents/Resources,
 					/Library/Extensions/Lilu.kext/Contents/Resources,
 				);
-				INFOPLIST_FILE = RGBDriver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULE_NAME = me.jdiggity.RGBDriver;
 				MODULE_VERSION = 1.0.0d1;
 				MTL_ENABLE_DEBUG_INFO = "";
@@ -603,17 +593,13 @@
 					/Library/Extensions/VirtualSMC.kext/Contents/Resources,
 					/Library/Extensions/Lilu.kext/Contents/Resources,
 				);
-				INFOPLIST_FILE = RGBDriver/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULE_NAME = me.jdiggity.RGBDriver;
 				MODULE_VERSION = 1.0.0d1;
 				MTL_ENABLE_DEBUG_INFO = "";
@@ -642,6 +628,28 @@
 			};
 			name = Release;
 		};
+		D8854939225D267600227707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D44Y5BBJ48;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D885493A225D267600227707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D44Y5BBJ48;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -659,6 +667,15 @@
 			buildConfigurations = (
 				D8805DAB2252B79600D81AB6 /* Debug */,
 				D8805DAC2252B79600D81AB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8854938225D267600227707 /* Build configuration list for PBXNativeTarget "RGBKextAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8854939225D267600227707 /* Debug */,
+				D885493A225D267600227707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

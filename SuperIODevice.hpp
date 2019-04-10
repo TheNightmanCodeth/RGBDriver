@@ -16,7 +16,7 @@
 #include <IOKit/IOService.h>
 #include <architecture/i386/pio.h>
 #include <VirtualSMCSDK/kern_vsmcapi.hpp>
-
+#include "Shared.h"
 #define CALL_MEMBER_FUNC(obj, func) ((obj).*(func))
 
 enum SuperIOModel
@@ -137,6 +137,8 @@ public:
     uint16_t getDeviceAddress() { return deviceAddress; }
     i386_ioport_t getDevicePort() { return devicePort; }
     const RGBDriver* getRGBDriver() { return rgbDriver; }
+    
+    virtual bool runProgram(RGBProgram p);
 };
 
 #endif /* SuperIODevice_hpp */

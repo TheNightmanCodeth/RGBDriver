@@ -10,6 +10,7 @@
 #define NuvotonDevice_hpp
 
 #include "WinbondFamilyDevice.hpp"
+#include "Shared.h"
 
 namespace Nuvoton {
     // Cool values I pulled from https://github.com/acidanthera/VirtualSMC/blob/master/Sensors/SMCSuperIO/NuvotonDevice.hpp
@@ -61,43 +62,6 @@ namespace Nuvoton {
         uint8_t fadeInVal = 0b11100000;
         
     public:
-        struct Program {
-            /**
-             * Inverse
-             */
-            const bool invR;
-            const bool invG;
-            const bool invB;
-            
-            /**
-             * flash/blink
-             */
-            const uint8_t flash;
-            
-            /**
-             * smooth pulse
-             */
-            const bool pulse;
-            
-            /**
-             * Fade-in
-             */
-            const bool fadeR;
-            const bool fadeG;
-            const bool fadeB;
-            
-            /**
-             * Color cell values
-             */
-            const uint32_t red;
-            const uint32_t grn;
-            const uint32_t blu;
-            
-            /**
-             * Step duration
-             */
-            const uint16_t stepDuration;
-        };
         
         /**
          * Writes a byte into device's register
@@ -112,7 +76,7 @@ namespace Nuvoton {
         /**
          * Runs an LED program.
          */
-        void runProgram(Program program);
+        virtual bool runProgram(RGBProgram program) override;
         
         /**
          * Enables pulsing
@@ -132,17 +96,17 @@ namespace Nuvoton {
         /**
          * Makes the e4val
          */
-        uint8_t makeE4Val(Program program);
+        uint8_t makeE4Val(RGBProgram program);
         
         /**
          * Makes the fade-in value
          */
-        void makeFadeInVal(uint8_t *fade, Program p);
+        void makeFadeInVal(uint8_t *fade, RGBProgram p);
         
         /**
          * Makes the invert value
          */
-        void makeInvertVal(uint8_t *invert, Program p);
+        void makeInvertVal(uint8_t *invert, RGBProgram p);
         
         /**
          * Overrides
